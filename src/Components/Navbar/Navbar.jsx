@@ -17,9 +17,9 @@ const Logo = styled(Typography)({
   fontWeight: 'bold',
 });
 
-const MenuButton = styled(IconButton)({
-  marginRight: '16px',
-});
+// const MenuButton = styled(IconButton)({
+//   marginRight: '16px',
+// });
 
 const NavButton = styled(Button)({
   color: '#ecf0f1',
@@ -30,9 +30,9 @@ const Navbar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: '#2c3e50' }}>
       <NavbarContainer>
-        <MenuButton edge="start" color="inherit" aria-label="menu">
+        {/* <MenuButton edge="start" color="inherit" aria-label="menu">
           <MenuIcon />
-        </MenuButton>
+        </MenuButton> */}
         <Logo variant="h6" component="div" to="/" as="a">
           Nur Al'Islam
         </Logo>
