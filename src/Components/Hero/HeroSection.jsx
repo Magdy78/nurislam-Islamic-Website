@@ -6,7 +6,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const generateRandomInteger = () => {
-      // Generate a random integer between 1 and 6236 (inclusive)
+      // Generate a random integer between 1 and 6236 
       return Math.floor(Math.random() * 6236) + 1;
     };
 
@@ -18,7 +18,7 @@ const HeroSection = () => {
 
         console.log('API Response:', data);
 
-        // Assuming the API response has a structure like { code: 200, data: { number, text } }
+       
         const ayahText = data.data.text;
 
         setRandomAyah(ayahText);
@@ -43,9 +43,9 @@ const HeroSection = () => {
         textAlign: 'center',
       }}
     >
-      <Typography variant="h2" gutterBottom>
-        Welcome to Your Website
-      </Typography>
+      <h1>
+      "Allahumma inni as'aluka al-'afiyah – O Allah, I ask You for well-being."
+      </h1>
       <Typography variant="subtitle1" gutterBottom>
         {randomAyah ? `"${randomAyah}"` : 'Loading Ayah...'}
       </Typography>
