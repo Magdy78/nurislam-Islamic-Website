@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import HeroSection from './Components/Hero/HeroSection';
 import Discover from './Components/Discover/Discover';
+import GridPage from './Components/Grid/Grid';
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
     <Navbar></Navbar>
     <HeroSection />
     <Discover></Discover>
+    <GridPage></GridPage>
     </div>
   );
 }

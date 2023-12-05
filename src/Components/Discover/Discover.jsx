@@ -38,7 +38,14 @@ const Discover = () => {
         </h3>
       </Container>
 
-
+      <iframe
+          width="100%"
+          height="400"
+          src="https://www.youtube.com/embed/3pTs8mpgQqk"
+          title="Pillars Of Islam"
+          frameBorder="0"
+          allowFullScreen
+        ></iframe>
 
     </Box>
 
