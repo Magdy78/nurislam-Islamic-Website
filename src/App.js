@@ -6,6 +6,7 @@ import Discover from './Components/Discover/Discover';
 import GridPage from './Components/Grid/Grid';
 import AllahNamesSection from './Components/Names/AllahNames';
 import Footer from './Components/Footer/Footer';
+import QuranPage from './Components/Quran/Quran';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <GridPage></GridPage>
     <AllahNamesSection></AllahNamesSection>
    <Footer></Footer>
+   <QuranPage></QuranPage>
     </div>
   );
 }
