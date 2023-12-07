@@ -17,8 +17,8 @@ const Discover = () => {
           fontFamily="serif"
           fontWeight={"100px"}
         >
-          The Five Pillars of Islam <br />
-          أركان الاسلام الخمسة 
+          The Five Pillars of Islam 🖐🏼​ <br />
+          🖐🏼​أركان الاسلام الخمسة 
         </Typography>
 
         <h3 style={{ fontFamily: "'Amiri', serif", textAlign: "center" }}>
@@ -43,7 +43,7 @@ const Discover = () => {
           height="400"
           src="https://www.youtube.com/embed/3pTs8mpgQqk"
           title="Pillars Of Islam"
-          frameBorder="0"
+          
           allowFullScreen
         ></iframe>
 
