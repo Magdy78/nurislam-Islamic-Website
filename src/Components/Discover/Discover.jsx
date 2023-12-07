@@ -52,24 +52,6 @@ const Discover = () => {
   );
 };
 
-// const Pillar = ({ title, description }) => {
-//   return (
-//     <Box
-//       sx={{
-//         backgroundColor: "#fff",
-//         padding: "20px",
-//         borderRadius: "8px",
-//         boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-//         textAlign: "center",
-//         width: "200px",
-//       }}
-//     >
-//       <Typography variant="h5" sx={{ marginBottom: "10px" }}>
-//         {title}
-//       </Typography>
-//       <Typography>{description}</Typography>
-//     </Box>
-//   );
-// };
+
 
 export default Discover;
