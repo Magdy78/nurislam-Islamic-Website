@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box,Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { DateTime } from "luxon";
 
 const HeroSection = () => {
@@ -8,10 +8,16 @@ const HeroSection = () => {
   const [gregorianDate, setGregorianDate] = useState(null);
   const [prayerTimes, setPrayerTimes] = useState(null);
 
+  const handleQuranButtonClick = () => {
+    window.location.href = "/quran";
+  };
+
   useEffect(() => {
     const generateRandomInteger = () => {
       return Math.floor(Math.random() * 6236) + 1;
     };
+
+   
 
     const fetchRandomAyah = async () => {
       try {
@@ -135,8 +141,6 @@ const HeroSection = () => {
         {randomAyah ? `"${randomAyah}"` : "Loading Ayah..."}
       </Typography>
 
-      
-
       {/* Times Of Prayers */}
       <Typography
         variant="caption"
@@ -179,8 +183,13 @@ const HeroSection = () => {
         {prayerTimes ? prayerTimes.Isha + " PM" : "Loading..."}
       </Typography>
 
-      <Button variant="contained" color="secondary" style={{ marginTop: "20px" }}>
-       Check For the Holy Book of Allah 
+      <Button
+        variant="contained"
+        color="secondary"
+        style={{ marginTop: "20px" }}
+        onClick={handleQuranButtonClick}
+      >
+        Check For the Holy Book of Allah
       </Button>
     </Box>
   );

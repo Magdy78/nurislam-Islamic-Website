@@ -7,19 +7,32 @@ import GridPage from './Components/Grid/Grid';
 import AllahNamesSection from './Components/Names/AllahNames';
 import Footer from './Components/Footer/Footer';
 import QuranPage from './Components/Quran/Quran';
+import React, { useState } from "react";
 
-function App() {
+const App = () => {
+  const [showQuranPage, setShowQuranPage] = useState(false);
+
+  const handleQuranButtonClick = () => {
+    setShowQuranPage(true);
+  };
+
   return (
     <div>
-    <Navbar></Navbar>
-    <HeroSection />
-    <Discover></Discover>
-    <GridPage></GridPage>
-    <AllahNamesSection></AllahNamesSection>
-   <Footer></Footer>
-   <QuranPage></QuranPage>
+      <Navbar />
+      {showQuranPage ? (
+        <QuranPage />
+      ) : (
+        <>
+          <HeroSection />
+          <Discover />
+          <GridPage />
+          <AllahNamesSection />
+          <Footer />
+          <button onClick={handleQuranButtonClick}>Go to Quran Page</button>
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;
