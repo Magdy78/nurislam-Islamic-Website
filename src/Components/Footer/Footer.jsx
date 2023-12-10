@@ -17,7 +17,7 @@ const Footer = () => {
           <nav>
             <Link href="#" color="inherit" underline="hover" variant="body2">Azkar</Link>
             <br />
-            <Link href="#" color="inherit" underline="hover" variant="body2">Quran</Link>
+            <Link href="/quran" color="inherit" underline="hover" variant="body2">Quran</Link>
             <br />
             <Link href="#" color="inherit" underline="hover" variant="body2">Hadith</Link>
           </nav>

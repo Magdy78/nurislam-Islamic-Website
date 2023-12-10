@@ -26,28 +26,13 @@ const QuranPage = () => {
 
   return (
     <Container>
-      <Typography variant="h2" align="center" sx={{ marginBottom: '20px' }}>
-        Quran Page
+      <Typography variant='h3' align='center' style={{ marginTop: '20px' }}>
+        بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
       </Typography>
 
       <Grid container spacing={2}>
-        {/* Surah List */}
         <Grid item xs={4}>
           <SurahList surahs={quranData?.surahs || []} onSurahClick={handleSurahClick} />
-        </Grid>
-
-        {/* Selected Surah Details */}
-        <Grid item xs={8}>
-          {selectedSurah && (
-            <Card>
-              <CardContent>
-                <Typography variant="h5">{selectedSurah.englishName}</Typography>
-                {selectedSurah.ayahs.map((ayah) => (
-                  <p key={ayah.number}>{ayah.text}</p>
-                ))}
-              </CardContent>
-            </Card>
-          )}
         </Grid>
       </Grid>
     </Container>

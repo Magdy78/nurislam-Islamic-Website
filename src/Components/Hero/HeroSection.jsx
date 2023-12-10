@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { DateTime } from "luxon";
+import { NavLink, useHistory,useNavigate } from "react-router-dom";
+
 
 const HeroSection = () => {
   const [randomAyah, setRandomAyah] = useState(null);
   const [hijriDate, setHijriDate] = useState(null);
   const [gregorianDate, setGregorianDate] = useState(null);
   const [prayerTimes, setPrayerTimes] = useState(null);
+  const navigate = useNavigate(); 
 
   const handleQuranButtonClick = () => {
-    window.location.href = "/quran";
+    navigate("/quran"); 
   };
 
   useEffect(() => {
     const generateRandomInteger = () => {
       return Math.floor(Math.random() * 6236) + 1;
     };
-
-   
 
     const fetchRandomAyah = async () => {
       try {

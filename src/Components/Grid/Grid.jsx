@@ -1,17 +1,43 @@
-import React from 'react';
-import { Grid, Card, CardContent, Typography, Button, Container } from '@mui/material';
-import Quran from '../Images/Quran.png';
-import Azkar from '../Images/Azkar.png';
-import Hadith from '../Images/Hadith.png';
+import React from "react";
+import {
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  Button,
+  Container,
+} from "@mui/material";
+import Quran from "../Images/Quran.png";
+import Azkar from "../Images/Azkar.png";
+import Hadith from "../Images/Hadith.png";
+import { NavLink, useHistory, useNavigate } from "react-router-dom";
 
 const GridPage = () => {
+  const navigate = useNavigate(); // Use useNavigate() instead of useHistory()
+
+  const handleQuranButtonClick = () => {
+    navigate("/quran");
+  };
+
   return (
     <Container>
-      <Grid container spacing={3} justifyContent="center" alignItems="stretch" sx={{ marginTop: '20px' }}>
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        alignItems="stretch"
+        sx={{ marginTop: "20px" }}
+      >
         {/* Quran Card */}
         <Grid item xs={12} sm={6} md={4}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <img src={Quran} alt="Quran" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+          <Card
+            sx={{ display: "flex", flexDirection: "column", height: "100%" }}
+          >
+            <img
+              src={Quran}
+              alt="Quran"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h6" gutterBottom>
                 Quran
@@ -20,7 +46,7 @@ const GridPage = () => {
                 Explore the holy Quran and its verses.
               </Typography>
             </CardContent>
-            <Button color="primary" fullWidth>
+            <Button color="primary" fullWidth onClick={handleQuranButtonClick}>
               Go to Quran
             </Button>
           </Card>
@@ -28,8 +54,14 @@ const GridPage = () => {
 
         {/* Hadith Card */}
         <Grid item xs={12} sm={6} md={4}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <img src={Hadith} alt="Hadith" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+          <Card
+            sx={{ display: "flex", flexDirection: "column", height: "100%" }}
+          >
+            <img
+              src={Hadith}
+              alt="Hadith"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h6" gutterBottom>
                 Hadith
@@ -46,8 +78,14 @@ const GridPage = () => {
 
         {/* Azkar Card */}
         <Grid item xs={12} sm={6} md={4}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <img src={Azkar} alt="Azkar" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+          <Card
+            sx={{ display: "flex", flexDirection: "column", height: "100%" }}
+          >
+            <img
+              src={Azkar}
+              alt="Azkar"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h6" gutterBottom>
                 Azkar

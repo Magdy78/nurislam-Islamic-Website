@@ -1,7 +1,8 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Container, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Toolbar, Typography, Container } from '@mui/material';
+import { Link } from 'react-router-dom'; // Import Link
 import { styled } from '@mui/system';
+import QuranPage from '../Quran/Quran';
 
 const NavbarContainer = styled(Container)({
   display: 'flex',
@@ -17,24 +18,28 @@ const Logo = styled(Typography)({
   fontWeight: 'bold',
 });
 
-
-
-const NavButton = styled(Button)({
+const NavButton = styled(Link)({
   color: '#ecf0f1',
   marginLeft: '8px',
+  textDecoration: 'none',
 });
 
 const Navbar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: '#2c3e50' }}>
       <NavbarContainer>
-        <Logo variant="h6" component="div" to="/" as="a">
+        <Logo variant="h6" component={Link} to="/">
           Nur Al'Islam
         </Logo>
-        <NavButton href="/">Home</NavButton>
-        <NavButton href="/quran">Quran</NavButton>
-        <NavButton href="/hadith">Hadith</NavButton>
-   
+        <NavButton to="/" component={Link}>
+          Home
+        </NavButton>
+        <NavButton to="/Quran" component={QuranPage}>
+          Quran
+        </NavButton>
+        <NavButton to="/Hadith" component={Link}>
+          Hadith
+        </NavButton>
       </NavbarContainer>
     </AppBar>
   );
