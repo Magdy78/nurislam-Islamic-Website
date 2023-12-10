@@ -29,7 +29,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       <Typography variant="body2" color="textSecondary" align="center" sx={{ mt: 2 }}>
-        © {new Date().getFullYear()} Nur Al-Islam ☪. All rights reserved.
+        © {new Date().getFullYear()} Nur Al-Islam ☪. All rights reserved. BetaVersion
       </Typography>
     </Container>
   );

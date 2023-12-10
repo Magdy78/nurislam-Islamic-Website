@@ -29,7 +29,7 @@ const Navbar = () => {
     <AppBar position="static" sx={{ backgroundColor: '#2c3e50' }}>
       <NavbarContainer>
         <Logo variant="h6" component={Link} to="/">
-          Nur Al'Islam
+          Nur Al'Islam BetaVersion
         </Logo>
         <NavButton to="/" component={Link}>
           Home
